@@ -1,0 +1,24 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjpub/webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wjpub/webpack/issues"
+  },
+  "homepage": "https://github.com/wjpub/webpack#readme",
+  "devDependencies": {
+    "lodash": "^4.17.4",
+    "webpack": "^3.4.1"
+  }
+}
