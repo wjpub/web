@@ -23,5 +23,6 @@ module.exports = Merge(CommonConfig, {
             minimize: true,
             debug: false
         }),
+        new Webpack.HashedModuleIdsPlugin(),
     ]
 });

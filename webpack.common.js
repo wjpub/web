@@ -7,14 +7,14 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
     entry: {
         app: './src/index.js',
-        // print: './src/print.js',
-        // vender: [
-        //     'lodash',
-        // ],
+        print: './src/print.js',
+        vender: [
+            'lodash',
+        ],
     },
     output: {
         filename: '[name].[hash].js',
-        chunkFilename: '[name].[chunkhash].js',
+        // chunkFilename: '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -58,14 +58,15 @@ module.exports = {
             title: 'OUTPUT_MANAGEMENT',
         }),
         new ManifestPlugin(),
-        // new Webpack.optimize.CommonsChunkPlugin({
-        //     name: 'vender'
-        // }),
-        // new Webpack.optimize.CommonsChunkPlugin({
-        //     name: 'runtime'
-        // }),
+        new Webpack.optimize.CommonsChunkPlugin({
+            name: 'vender'
+        }),
+        new Webpack.optimize.CommonsChunkPlugin({
+            name: 'runtime'
+        }),
         // new Webpack.optimize.CommonsChunkPlugin({
         //     name: 'common',
         // })
+
     ],
 }

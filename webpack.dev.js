@@ -6,6 +6,7 @@ module.exports = Merge(CommonConfig, {
     devtool: 'inline-source-map',
     plugins: [
         new Webpack.HotModuleReplacementPlugin(),
+        // new Webpack.NamedModulesPlugin(),
     ],
     devServer: {
         contentBase: './dist',
