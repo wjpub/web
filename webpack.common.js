@@ -1,5 +1,5 @@
 const path = require("path");
-// const Webpack = require('webpack');
+const Webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -11,7 +11,6 @@ module.exports = {
         // vender: [
         //     'lodash',
         // ],
-        // another: './src/another-module.js'
     },
     output: {
         filename: '[name].[hash].js',

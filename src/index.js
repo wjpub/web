@@ -1,8 +1,8 @@
-// import _ from 'lodash';
+import _ from 'lodash';
 // import printMe from './print.js';
 // import './style.css';
 
-async function getComponent() {
+function component() {
 
     // return import(/* webpacChunkName: "lodash" */ 'lodash').then(_ => {
     //     var element = document.createElement('div');
@@ -11,14 +11,24 @@ async function getComponent() {
     // }).catch(error => 'an error accurred while loading the component!');
 
     var element = document.createElement('div');
-    const _ = await import('lodash');
+    var button = document.createElement('button');
+    var br = document.createElement('br');
+    button.innerHTML = '123 click';
     element.innerHTML = _.join(['qwe', 'asd'], ' dd ');
+    element.appendChild(br);
+    element.appendChild(button);
+    // Note that because a network request is involved, some indication
+    // of loading would need to be shown in a production-level site/app.
+    button.onclick = e => import(/* webpackChunkName: "print" */ './print').then(module => {
+        var print = module.default;
+        print();
+    });
     return element;
 }
 
-getComponent().then(component => {
-    document.body.appendChild(component);
-});
+// getComponent().then(component => {
+//     document.body.appendChild(component);
+// });
 
 // function component() {
 //     var element = document.createElement('div');
@@ -31,7 +41,7 @@ getComponent().then(component => {
 //
 //     return element;
 // }
-// document.body.appendChild(component());
+document.body.appendChild(component());
 //
 // if (module.hot) {
 //     module.hot.accept('./print.js', function () {
