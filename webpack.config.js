@@ -7,7 +7,8 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        hot: true
     },
     entry: {
         app: './src/index.js',
@@ -17,18 +18,18 @@ module.exports = {
         ]
     },
     output: {
-        filename: '[name].[chunkhash].js',
+        filename: '[name].[hash].js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
         rules: [
-            // {
-            //     test: /\.css$/,
-            //     use: [
-            //         'style-loader',
-            //         'css-loader'
-            //     ]
-            // },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
             // {
             //     test: /\.(png|jpg|jpeg|gif|svg)$/i,
             //     use: [
@@ -52,7 +53,8 @@ module.exports = {
             //     use: [
             //         'xml-loader'
             //     ]
-            // }
+            // },
+            {}
         ]
     },
     plugins: [
@@ -68,5 +70,6 @@ module.exports = {
         new Webpack.optimize.CommonsChunkPlugin({
             name: 'runtime'
         }),
+        new Webpack.HotModuleReplacementPlugin(),
     ]
 }
