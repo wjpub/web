@@ -5,6 +5,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist'
+    },
     entry: {
         app: './src/index.js',
         print: './src/print.js',
