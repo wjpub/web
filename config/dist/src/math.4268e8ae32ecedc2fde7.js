@@ -1,1 +1,0 @@
-webpackJsonp([5],{MddZ:function(e,u,n){"use strict";function square(e){return e*e}function cube(e){return e*e*e}Object.defineProperty(u,"__esModule",{value:!0}),u.square=square,u.cube=cube}},["MddZ"]);

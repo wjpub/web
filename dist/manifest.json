@@ -1,0 +1,9 @@
+{
+  "common.js": "common.38c32d0c7e0c6ea4be15.js",
+  "module1/index.js": "module1/index.38c32d0c7e0c6ea4be15.js",
+  "module2/index.js": "module2/index.38c32d0c7e0c6ea4be15.js",
+  "src/another.js": "src/another.38c32d0c7e0c6ea4be15.js",
+  "src/index.js": "src/index.38c32d0c7e0c6ea4be15.js",
+  "src/math.js": "src/math.38c32d0c7e0c6ea4be15.js",
+  "src/print.js": "src/print.38c32d0c7e0c6ea4be15.js"
+}
