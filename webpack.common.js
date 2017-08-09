@@ -17,6 +17,11 @@ module.exports = {
         // chunkFilename: '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'dist')
     },
+    resolve: {
+        // alias: {
+        //     // jquery: 'path to jquery'
+        // }
+    },
     module: {
         rules: [
             // {
@@ -49,6 +54,18 @@ module.exports = {
             //     use: [
             //         'xml-loader'
             //     ]
+            // },
+            // {
+            //     test: require.resolve("some-module"),
+            //     use: 'exports-loader?file,parse=helpers.parse'
+            //     // 在文件的源码中加入以下代码
+            //     //  exports["file"] = file;
+            //     //  exports["parse"] = helpers.parse;
+            // },
+            // {
+            //     test: require.resolve("some-module"),
+            //     use: 'imports-loader?this=>window'
+            //     use: 'imports-loader?define=>false'
             // }
         ]
     },
@@ -67,6 +84,11 @@ module.exports = {
         // new Webpack.optimize.CommonsChunkPlugin({
         //     name: 'common',
         // })
-
+        new Webpack.ProvidePlugin({
+            // $: 'jquery',
+            // jQuery: 'jquery',
+            // __assign: ['tslib', '__assign'],
+            // __extends: ['tslib', '__extends']
+        })
     ],
 }
