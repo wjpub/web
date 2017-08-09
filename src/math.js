@@ -11,3 +11,6 @@ export function cube(x) {
 //use
 //import {cube} from './math.js'
 //cube(5);
+function asdfasdfasdfasdf(){
+	
+}

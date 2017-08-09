@@ -1,6 +1,9 @@
 {
-  "app.js": "app.9886adb191fd68596772.js",
-  "print.js": "print.9886adb191fd68596772.js",
-  "runtime.js": "runtime.9886adb191fd68596772.js",
-  "vender.js": "vender.9886adb191fd68596772.js"
+  "common.js": "common.d76fdc4fa579a9d76487.js",
+  "module1/index.js": "module1/index.d76fdc4fa579a9d76487.js",
+  "module2/index.js": "module2/index.d76fdc4fa579a9d76487.js",
+  "src/another.js": "src/another.d76fdc4fa579a9d76487.js",
+  "src/index.js": "src/index.d76fdc4fa579a9d76487.js",
+  "src/math.js": "src/math.d76fdc4fa579a9d76487.js",
+  "src/print.js": "src/print.d76fdc4fa579a9d76487.js"
 }
