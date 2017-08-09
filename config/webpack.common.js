@@ -25,7 +25,7 @@ module.exports = {
     output: {
         filename: '[name].[hash].js',
         // chunkFilename: '[name].[chunkhash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, './../dist')
     },
     resolve: {
         alias: {
